@@ -6,14 +6,13 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 09:28:16 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/24 10:59:18 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/24 18:36:06 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_any(char **tab, int (*f)(char *))
 {
 	int	i;
-
 
 	i = -1;
 	while (tab[++i])
