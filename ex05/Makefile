@@ -1,12 +1,19 @@
 NAME=do-op
-SOURCES=do-op.c ft_atoi.c ft_putnbr.c ft_putstr.c ft_strlen.c
+SOURCES=srcs/do-op.c srcs/ft_atoi.c srcs/ft_putnbr.c srcs/ft_putstr.c srcs/ft_strlen.c
+OBJECTS=$(SOURCES:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJECTS)
 	gcc -Wall -Wextra -Werror -o $(NAME) $(SOURCES)
 
+%.o: %.c
+	gcc -Wall -Wextra -Werror -c $< -o $@
+
 clean:
+	rm -f $(OBJECTS)
+
+fclean: clean
 	rm -f $(NAME)
 
-re: clean all
+re: fclean all
